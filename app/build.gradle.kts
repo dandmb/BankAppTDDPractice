@@ -33,6 +33,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
+
     }
     buildFeatures {
         compose = true
@@ -81,7 +83,8 @@ dependencies {
     testImplementation(libs.kotest.assertions)
     androidTestImplementation(libs.androidx.room.testing)
 
-    androidTestImplementation(libs.turbine)    // ← ajoute
+    androidTestImplementation(libs.turbine)
 
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 
 }
