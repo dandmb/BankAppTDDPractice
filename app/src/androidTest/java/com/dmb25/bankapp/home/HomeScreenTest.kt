@@ -138,10 +138,6 @@ class HomeScreenTest {
         composeTestRule.onNodeWithText("Salaire").assertDoesNotExist()
     }
 
-    // =========================================
-    // Error
-    // =========================================
-
     @Test
     fun whenStateIsError_errorMessageIsDisplayed() {
         composeTestRule.setContent {
